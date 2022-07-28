@@ -22,3 +22,9 @@ jobs:
       - name: Rodar Testes Automáticos
         run: |
           pipenv run pytest tasks
+      - name: Cobertura de testes
+        run: |
+          pipenv run pytest --cov=tasks
+      - name: Carregar relatórios
+        run: |
+          pipenv run codecov
