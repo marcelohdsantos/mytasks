@@ -9,6 +9,8 @@ gunicorn = "*"
 
 [dev-packages]
 pytest-django = "*"
+pytest-cov = "*"
+codecov = "*"
 
 [requires]
 python_version = "3.10"
