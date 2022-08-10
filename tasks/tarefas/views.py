@@ -16,6 +16,7 @@ def home(request):
             return HttpResponseRedirect(reverse('tarefas:home'))
         else:
             tarefas_pendentes = Tarefa.objects.filter(feita=False).all()
-            return render(request, 'tarefas/home.html', {'form': form, 'tarefas_pendentes': tarefas_pendentes}, status=400)
+            return render(request, 'tarefas/home.html', {'form': form, 'tarefas_pendentes': tarefas_pendentes},
+                          status=400)
     tarefas_pendentes = Tarefa.objects.filter(feita=False).all()
     return render(request, 'tarefas/home.html', {'tarefas_pendentes': tarefas_pendentes})
